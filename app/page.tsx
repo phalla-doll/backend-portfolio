@@ -32,25 +32,25 @@ export default function PortfolioPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center z-10 w-full max-w-5xl"
+          className="text-center z-10 w-full"
         >
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-[7.5rem] leading-[1.05] tracking-tight font-bold mb-4">
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-[7rem] xl:text-[8rem] leading-tight md:leading-[1.05] tracking-tight font-bold mb-4">
             Hi I'm Vorleak
-            <br />
-            <span className="font-light italic tracking-normal">Backend</span> Developer
+            <br className="hidden md:block" />
+            <span className="font-light italic tracking-normal text-brand/90 md:mr-4">Backend</span> Developer
           </h1>
         </motion.div>
 
-        <div className="w-full max-w-6xl mt-12 md:mt-20 flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative">
+        <div className="w-full max-w-7xl mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative">
           
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex items-center gap-3 bg-white/80 backdrop-blur-md px-5 py-3 rounded-full border border-black/5 shadow-sm"
+            className="flex items-center gap-3 bg-white/80 backdrop-blur-md px-5 py-3 rounded-full border border-black/5 shadow-sm md:w-64"
           >
-            <div className="w-3 h-3 bg-brand rounded-full animate-pulse"></div>
-            <span className="font-medium text-sm">Available for new opportunities</span>
+            <div className="w-3 h-3 bg-brand rounded-full animate-pulse shrink-0"></div>
+            <span className="font-medium text-sm leading-tight text-left">Available for new opportunities</span>
           </motion.div>
 
           {/* Center Portrait - Using a clean, professional placeholder that fits the vibe */}
@@ -58,31 +58,31 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="relative w-64 h-80 md:w-80 md:h-[26rem] mx-auto md:absolute md:left-1/2 md:-translate-x-1/2 md:-bottom-12"
+            className="relative w-64 h-80 md:w-[22rem] md:h-[28rem] mx-auto md:-mt-20 z-20"
           >
              <Image 
                 src="https://picsum.photos/seed/backend/1000/1600" 
                 alt="Vorleak Som"
                 fill
                 className="object-cover rounded-[2rem] shadow-2xl z-20 object-top"
-                sizes="(max-width: 768px) 100vw, 320px"
+                sizes="(max-width: 768px) 100vw, 350px"
                 priority
               />
               {/* Decorative elements behind image */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-black/5 rounded-[3rem] -z-10 rotate-3"></div>
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-black/5 rounded-[2.5rem] -z-10 -rotate-2"></div>
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[115%] border border-black/5 rounded-[3rem] -z-10 rotate-3"></div>
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border border-black/5 rounded-[2.5rem] -z-10 -rotate-2"></div>
           </motion.div>
 
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-col items-center md:items-end text-center md:text-right max-w-[200px]"
+            className="flex flex-col items-center md:items-end text-center md:text-right max-w-[250px] md:w-64"
           >
              <p className="text-sm font-medium mb-6">
                 Passionate about architecting robust server-side systems and building scalable APIs.
              </p>
-             <button className="bg-[#111] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-black/80 transition-colors">
+             <button className="bg-[#111] text-white px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 hover:bg-black/80 transition-colors w-full md:w-auto">
                 <ArrowRight size={18} />
                 Get in Touch
              </button>
