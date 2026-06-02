@@ -91,7 +91,13 @@ export default function PortfolioPage() {
       </section>
 
       {/* Trusted By / Tech Stack Banner */}
-      <div className="w-full border-y border-black/10 bg-white/50 py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8 backdrop-blur-sm relative z-20">
+      <motion.div 
+         initial={{ opacity: 0, y: 20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, margin: "-50px" }}
+         transition={{ duration: 0.6 }}
+         className="w-full border-y border-black/10 bg-white/50 py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8 backdrop-blur-sm relative z-20"
+      >
          <div className="flex items-center gap-4">
            <div className="flex -space-x-3">
               {[1, 2, 3].map((i) => (
@@ -109,10 +115,16 @@ export default function PortfolioPage() {
             <span>Docker</span>
             <span>AWS</span>
          </div>
-      </div>
+      </motion.div>
 
       {/* Hello / Skills Section */}
-      <section className="py-24 px-6 md:px-12 max-w-6xl mx-auto text-center">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="py-24 px-6 md:px-12 max-w-6xl mx-auto text-center"
+      >
         <h3 className="font-heading italic text-3xl mb-8">Hello!</h3>
         <div className="relative max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-light leading-tight">
@@ -135,7 +147,7 @@ export default function PortfolioPage() {
             <Lock size={14} className="text-[#a3e635]" /> <span className="text-sm font-medium">Security</span>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* API Integrations & Database Expertise */}
       <section className="py-24 bg-white px-6 md:px-12">
@@ -147,7 +159,13 @@ export default function PortfolioPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* API Integration Card */}
-            <div className="bg-[#fcfcfc] rounded-3xl p-8 border border-black/5 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+            <motion.div 
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-100px" }}
+               transition={{ duration: 0.6, delay: 0.1 }}
+               className="bg-[#fcfcfc] rounded-3xl p-8 border border-black/5 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow"
+            >
                <div className="absolute top-0 right-0 w-32 h-32 bg-brand/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
                <div className="text-5xl font-heading font-light text-black/20 mb-6">01</div>
                <Webhook size={32} strokeWidth={1.5} className="mb-6 text-black" />
@@ -160,10 +178,16 @@ export default function PortfolioPage() {
                  <li className="flex items-center gap-2 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-brand"></div> API Gateway implementation</li>
                  <li className="flex items-center gap-2 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-brand"></div> Swagger/OpenAPI Spec</li>
                </ul>
-            </div>
+            </motion.div>
 
             {/* Database Card */}
-            <div className="bg-[#fcfcfc] rounded-3xl p-8 border border-black/5 shadow-sm lg:-mt-12 relative overflow-hidden group hover:shadow-md transition-shadow">
+            <motion.div 
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-100px" }}
+               transition={{ duration: 0.6, delay: 0.2 }}
+               className="bg-[#fcfcfc] rounded-3xl p-8 border border-black/5 shadow-sm lg:-mt-12 relative overflow-hidden group hover:shadow-md transition-shadow"
+            >
                <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand/10 rounded-full -z-10 group-hover:scale-110 transition-transform"></div>
                <div className="text-5xl font-heading font-light text-black/20 mb-6">02</div>
                <Database size={32} strokeWidth={1.5} className="mb-6 text-black" />
@@ -176,10 +200,16 @@ export default function PortfolioPage() {
                  <li className="flex items-center gap-2 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-brand"></div> High-Availability Clustering</li>
                  <li className="flex items-center gap-2 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-brand"></div> Multi-tenant Architectures</li>
                </ul>
-            </div>
+            </motion.div>
 
              {/* Cloud Architecture Card */}
-             <div className="bg-[#fcfcfc] rounded-3xl p-8 border border-black/5 shadow-sm md:mt-12 relative overflow-hidden group hover:shadow-md transition-shadow">
+             <motion.div 
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-100px" }}
+               transition={{ duration: 0.6, delay: 0.3 }}
+               className="bg-[#fcfcfc] rounded-3xl p-8 border border-black/5 shadow-sm md:mt-12 relative overflow-hidden group hover:shadow-md transition-shadow"
+             >
                <div className="absolute top-1/2 right-0 translate-x-1/2 -rotate-45 w-24 h-48 bg-brand/10 rounded-full -z-10 group-hover:scale-110 transition-transform"></div>
                <div className="text-5xl font-heading font-light text-black/20 mb-6">03</div>
                <Layers size={32} strokeWidth={1.5} className="mb-6 text-black" />
@@ -192,7 +222,7 @@ export default function PortfolioPage() {
                  <li className="flex items-center gap-2 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-brand"></div> Docker & Kubernetes</li>
                  <li className="flex items-center gap-2 text-sm font-medium"><div className="w-1.5 h-1.5 rounded-full bg-brand"></div> Event-Driven Messaging</li>
                </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -207,7 +237,13 @@ export default function PortfolioPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
              {/* Project 1 - Main Feature */}
-             <div className="lg:col-span-2 group cursor-pointer">
+             <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+                className="lg:col-span-2 group cursor-pointer"
+             >
                 <div className="bg-[#f4f4f5] rounded-[2rem] aspect-[16/9] md:aspect-[21/9] p-8 overflow-hidden relative border border-black/5">
                    {/* Abstract representation of a dashboard/API tool */}
                    <div className="w-full h-full bg-white rounded-xl shadow-xl border border-black/5 p-4 flex flex-col gap-4 transform group-hover:-translate-y-2 transition-transform duration-500">
@@ -252,10 +288,16 @@ export default function PortfolioPage() {
                      <span className="text-xs bg-gray-100 px-3 py-1 rounded-full font-medium">Go / PostgreSQL</span>
                    </div>
                 </div>
-             </div>
+             </motion.div>
 
              {/* Project 2 */}
-              <div className="group cursor-pointer">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="group cursor-pointer"
+              >
                 <div className="bg-[#f4f4f5] rounded-[2rem] aspect-square lg:aspect-auto lg:h-[calc(100%-4.5rem)] p-8 overflow-hidden relative border border-black/5 flex items-center justify-center">
                     <div className="w-full h-full max-h-64 bg-white rounded-xl shadow-xl border border-black/5 p-4 flex flex-col justify-between transform group-hover:scale-105 transition-transform duration-500">
                         <div className="flex items-center gap-3">
@@ -290,14 +332,20 @@ export default function PortfolioPage() {
                      <span className="text-xs bg-gray-100 px-3 py-1 rounded-full font-medium">HealthTech</span>
                    </div>
                 </div>
-             </div>
+             </motion.div>
 
           </div>
         </div>
       </section>
 
       {/* Footer CTA */}
-      <footer className="bg-[#f7f7f7] text-[#111] py-24 px-6 md:px-12 text-center relative overflow-hidden border-t border-black/5">
+      <motion.footer 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.8 }}
+        className="bg-[#f7f7f7] text-[#111] py-24 px-6 md:px-12 text-center relative overflow-hidden border-t border-black/5"
+      >
         <h2 className="font-heading text-4xl md:text-6xl font-medium mb-8">Ready to scale your backend?</h2>
         <p className="text-gray-500 max-w-md mx-auto mb-10">
           Let's discuss how we can build robust, high-performance architecture for your next big product.
@@ -314,7 +362,7 @@ export default function PortfolioPage() {
             <a href="#" className="hover:text-black transition-colors">Twitter</a>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 }
