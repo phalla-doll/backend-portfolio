@@ -1,0 +1,8 @@
+{
+  "name": "Backend Portfolio - Vorleak Som",
+  "description": "Portfolio for a Backend Developer featuring API integrations and database expertise.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

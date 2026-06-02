@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400&f[]=satoshi@900,700,500,300,400&display=swap');
+
+@theme {
+  --color-brand-light: #d9f99d;
+  --color-brand: #a3e635;
+  
+  --font-heading: 'Cabinet Grotesk', sans-serif;
+  --font-body: 'Satoshi', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.hero-glow {
+  background: radial-gradient(40% 50% at 50% 40%, rgba(163, 230, 53, 0.35) 0%, rgba(247, 247, 247, 0) 100%);
+}
