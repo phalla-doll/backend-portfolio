@@ -10,7 +10,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen relative overflow-hidden">
       {/* Navigation */}
       <nav className="absolute top-0 left-0 right-0 z-50 px-6 md:px-12 py-8 flex justify-between items-center">
-        <div className="font-heading text-2xl font-bold tracking-tight">Vorleak Som</div>
+        <div className="font-heading text-2xl font-medium tracking-tight">Vorleak Som</div>
         
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-black/5">
           <div className="w-4 h-4 bg-black rounded-full flex items-center justify-center p-0.5">
@@ -34,14 +34,14 @@ export default function PortfolioPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center z-10 w-full"
         >
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-[7rem] xl:text-[8rem] leading-tight md:leading-[1.05] tracking-tight font-bold mb-4">
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-[7rem] xl:text-[8rem] leading-tight md:leading-[1.05] tracking-tight font-medium mb-4">
             Hi I'm Vorleak
             <br className="hidden md:block" />
             <span className="font-light italic tracking-normal text-brand/90 md:mr-4">Backend</span> Developer
           </h1>
         </motion.div>
 
-        <div className="w-full max-w-7xl mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative">
+        <div className="w-full max-w-7xl mt-16 md:mt-24 flex flex-col md:flex-row items-center justify-between gap-12 z-10 relative">
           
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="relative w-64 h-80 md:w-[22rem] md:h-[28rem] mx-auto md:-mt-20 z-20"
+            className="relative w-64 h-80 md:w-[22rem] md:h-[28rem] mx-auto z-20 shrink-0"
           >
              <Image 
                 src="https://picsum.photos/seed/backend/1000/1600" 
@@ -100,9 +100,9 @@ export default function PortfolioPage() {
                 </div>
               ))}
            </div>
-           <p className="text-sm">Trusted by over <strong className="font-bold">50+ technical<br/>teams</strong> across enterprise projects.</p>
+           <p className="text-sm">Trusted by over <strong className="font-medium">50+ technical<br/>teams</strong> across enterprise projects.</p>
          </div>
-         <div className="flex gap-8 opacity-40 font-heading font-bold text-xl uppercase tracking-wider flex-wrap justify-center">
+         <div className="flex gap-8 opacity-40 font-heading font-medium text-xl uppercase tracking-wider flex-wrap justify-center">
             <span>PostgreSQL</span>
             <span>Redis</span>
             <span>GraphQL</span>
@@ -116,8 +116,8 @@ export default function PortfolioPage() {
         <h3 className="font-heading italic text-3xl mb-8">Hello!</h3>
         <div className="relative max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-light leading-tight">
-            focus is on building <span className="font-bold">scalable architecture</span>, 
-            robust APIs, and optimizing <span className="font-bold">database performance</span> 
+            focus is on building <span className="font-medium">scalable architecture</span>, 
+            robust APIs, and optimizing <span className="font-medium">database performance</span> 
             <br className="hidden md:block"/> to craft systems that <span className="text-brand/80 pb-1 border-b-2 border-brand/50">solve real problems</span>
           </h2>
           
@@ -142,7 +142,7 @@ export default function PortfolioPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-sm uppercase tracking-widest text-gray-500 font-medium">/ Core Expertise /</span>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mt-4">API & Data Management</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-medium mt-4">API & Data Management</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -151,7 +151,7 @@ export default function PortfolioPage() {
                <div className="absolute top-0 right-0 w-32 h-32 bg-brand/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
                <div className="text-5xl font-heading font-light text-black/20 mb-6">01</div>
                <Webhook size={32} strokeWidth={1.5} className="mb-6 text-black" />
-               <h3 className="text-2xl font-heading font-bold mb-4">REST & GraphQL APIs</h3>
+               <h3 className="text-2xl font-heading font-medium mb-4">REST & GraphQL APIs</h3>
                <p className="text-gray-600 leading-relaxed mb-6">
                  Designing unified, secure, and performant interfaces. Expertise in integrating complex third-party endpoints (Stripe, Twilio, OAuth) and constructing reliable Webhooks for real-time events.
                </p>
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
                <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand/10 rounded-full -z-10 group-hover:scale-110 transition-transform"></div>
                <div className="text-5xl font-heading font-light text-black/20 mb-6">02</div>
                <Database size={32} strokeWidth={1.5} className="mb-6 text-black" />
-               <h3 className="text-2xl font-heading font-bold mb-4">Database Architecture</h3>
+               <h3 className="text-2xl font-heading font-medium mb-4">Database Architecture</h3>
                <p className="text-gray-600 leading-relaxed mb-6">
                  Transforming raw data into structured, highly-available knowledge. Managing relational integrity with PostgreSQL while leveraging NoSQL (MongoDB, Redis) for speed and flexibility.
                </p>
@@ -183,7 +183,7 @@ export default function PortfolioPage() {
                <div className="absolute top-1/2 right-0 translate-x-1/2 -rotate-45 w-24 h-48 bg-brand/10 rounded-full -z-10 group-hover:scale-110 transition-transform"></div>
                <div className="text-5xl font-heading font-light text-black/20 mb-6">03</div>
                <Layers size={32} strokeWidth={1.5} className="mb-6 text-black" />
-               <h3 className="text-2xl font-heading font-bold mb-4">Cloud & Serverless</h3>
+               <h3 className="text-2xl font-heading font-medium mb-4">Cloud & Serverless</h3>
                <p className="text-gray-600 leading-relaxed mb-6">
                  Deploying and operating resilient backend services. Orchestrating containers across distributed environments and setting up efficient CI/CD pipelines.
                </p>
@@ -202,7 +202,7 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
              <span className="text-sm uppercase tracking-widest text-gray-500 font-medium">/ Best Projects /</span>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mt-4">Selected Works</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-medium mt-4">Selected Works</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -244,7 +244,7 @@ export default function PortfolioPage() {
                 </div>
                 <div className="mt-4 flex justify-between items-end">
                    <div>
-                     <h3 className="font-heading text-xl font-bold">Finvera Payments API</h3>
+                     <h3 className="font-heading text-xl font-medium">Finvera Payments API</h3>
                      <p className="text-gray-500 text-sm mt-1">High-throughput transaction processing engine.</p>
                    </div>
                    <div className="flex gap-2">
@@ -283,7 +283,7 @@ export default function PortfolioPage() {
                 </div>
                 <div className="mt-4 flex flex-col gap-2">
                    <div>
-                     <h3 className="font-heading text-lg font-bold">HealthSync GraphQL</h3>
+                     <h3 className="font-heading text-lg font-medium">HealthSync GraphQL</h3>
                      <p className="text-gray-500 text-sm mt-1">Unified health records API.</p>
                    </div>
                    <div className="flex gap-2">
@@ -299,11 +299,11 @@ export default function PortfolioPage() {
       {/* Footer CTA */}
       <footer className="bg-[#111] text-white py-24 px-6 md:px-12 text-center relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-2xl bg-brand/20 blur-[100px] rounded-full pointer-events-none"></div>
-        <h2 className="font-heading text-4xl md:text-6xl font-bold mb-8">Ready to scale your backend?</h2>
+        <h2 className="font-heading text-4xl md:text-6xl font-medium mb-8">Ready to scale your backend?</h2>
         <p className="text-gray-400 max-w-md mx-auto mb-10">
           Let's discuss how we can build robust, high-performance architecture for your next big product.
         </p>
-        <button className="bg-brand text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b0f23d] transition-colors inline-flex items-center gap-2">
+        <button className="bg-brand text-black px-8 py-4 rounded-full font-medium text-lg hover:bg-[#b0f23d] transition-colors inline-flex items-center gap-2">
           Start a Conversation <ArrowRight size={20} />
         </button>
 
