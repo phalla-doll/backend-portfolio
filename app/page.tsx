@@ -297,22 +297,21 @@ export default function PortfolioPage() {
       </section>
 
       {/* Footer CTA */}
-      <footer className="bg-[#111] text-white py-24 px-6 md:px-12 text-center relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-2xl bg-brand/20 blur-[100px] rounded-full pointer-events-none"></div>
+      <footer className="bg-[#f7f7f7] text-[#111] py-24 px-6 md:px-12 text-center relative overflow-hidden border-t border-black/5">
         <h2 className="font-heading text-4xl md:text-6xl font-medium mb-8">Ready to scale your backend?</h2>
-        <p className="text-gray-400 max-w-md mx-auto mb-10">
+        <p className="text-gray-500 max-w-md mx-auto mb-10">
           Let's discuss how we can build robust, high-performance architecture for your next big product.
         </p>
-        <button className="bg-brand text-black px-8 py-4 rounded-full font-medium text-lg hover:bg-[#b0f23d] transition-colors inline-flex items-center gap-2">
+        <button className="bg-[#111] text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-black/80 transition-colors inline-flex items-center gap-2 shadow-sm">
           Start a Conversation <ArrowRight size={20} />
         </button>
 
-        <div className="mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+        <div className="mt-24 pt-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-medium">
           <p>© {new Date().getFullYear()} Vorleak Som. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors">GitHub</a>
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
+            <a href="#" className="hover:text-black transition-colors">LinkedIn</a>
+            <a href="#" className="hover:text-black transition-colors">GitHub</a>
+            <a href="#" className="hover:text-black transition-colors">Twitter</a>
           </div>
         </div>
       </footer>
